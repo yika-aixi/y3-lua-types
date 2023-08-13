@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "types/gen",
+        "types": [
+            "@types/node"
+        ],
+        "moduleResolution": "Node",
+    },
+    "include": [
+        "types"
+    ],
+
+}

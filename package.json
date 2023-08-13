@@ -1,0 +1,38 @@
+{
+    "name": "@cabin-icarus/y3-lua-types",
+    "version": "0.0.5",
+    "description": "y3-lua的typescript的类型文件",
+    "files": [
+        "index.d.ts",
+        "types/**/*.d.ts"
+    ],
+    "keywords": [
+        "y3",
+        "types",
+        "typescript"
+    ],
+    "dependencies": {
+        "g": "^2.0.1",
+        "lua-types": "^2.13.1",
+        "tslib": "^2.6.1"
+    },
+    "peerDependencies": {
+        "typescript-to-lua": "^1.17.0"
+    },
+    "author": "Icarus",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yika-aixi/y3-lua-types"
+    },
+    "bugs": {
+        "url": "https://github.com/yika-aixi/y3-lua-types/issues"
+    },
+    "homepage": "https://github.com/yika-aixi/y3-lua-types",
+    "devDependencies": {
+        "create-ts-index": "^1.14.0",
+        "ctix": "^1.8.2",
+        "fs-extra": "^11.1.1",
+        "@types/node": "^20.4.10"
+    }
+}
