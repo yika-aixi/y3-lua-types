@@ -1,1 +1,6 @@
 /dist
+/node_modules
+/Lua
+/types/gen
+/index.d.ts
+/.idea
