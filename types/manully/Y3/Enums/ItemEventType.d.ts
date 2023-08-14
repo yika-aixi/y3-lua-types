@@ -1,0 +1,18 @@
+﻿declare module y3.Const
+{
+    const enum ItemEventType
+    {
+        ['ITEM_CREATE'] = "ET_ITEM_ON_CREATE",
+        ['ITEM_ADD'] = "ET_UNIT_ADD_ITEM",
+        ['ITEM_ADD_TO_PKG'] = "ET_UNIT_ADD_ITEM_TO_PKG",
+        ['ITEM_ADD_TO_BAR'] = 'ET_UNIT_ADD_ITEM_TO_BAR',
+        ['ITEM_REMOVE'] = 'ET_UNIT_REMOVE_ITEM',
+        ['ITEM_REMOVE_FROM_PKG'] = 'ET_UNIT_REMOVE_ITEM_FROM_PKG',
+        ['ITEM_REMOVE_FROM_BAR'] = 'ET_UNIT_REMOVE_ITEM_FROM_BAR',
+        ['ITEM_USE'] = 'ET_UNIT_USE_ITEM',
+        ['ITEM_CHANGE_STACK'] = "ET_ITEM_STACK_CHANGED",
+        ['ITEM_CHANGE_CHARGE'] = "ET_ITEM_CHARGE_CHANGED",
+        ['ITEM_DESTROY'] = "ET_ITEM_ON_DESTROY",
+        ['ITEM_CREATE_ON_DEST_COLLECTED'] = "ET_ITEM_CREATE_ON_DEST_COLLECTED",
+    }
+}

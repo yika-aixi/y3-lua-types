@@ -1,5 +1,5 @@
 // @ts-nocheck
 declare interface Game
 {
-    event(name:string, act:(...arg)=> void):Trigger;
+    event(name:y3.Const.GlobalEventType, act:ActionArgsNoSelf):Trigger;
 }
