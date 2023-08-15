@@ -1,6 +1,6 @@
 {
     "name": "@cabin-icarus/y3-lua-types",
-    "version": "0.0.8f",
+    "version": "0.1.0",
     "description": "y3-lua的typescript的类型文件",
     "files": [
         "index.d.ts",
@@ -28,11 +28,5 @@
     "bugs": {
         "url": "https://github.com/yika-aixi/y3-lua-types/issues"
     },
-    "homepage": "https://github.com/yika-aixi/y3-lua-types",
-    "devDependencies": {
-        "create-ts-index": "^1.14.0",
-        "ctix": "^1.8.2",
-        "fs-extra": "^11.1.1",
-        "@types/node": "^20.4.10"
-    }
+    "homepage": "https://github.com/yika-aixi/y3-lua-types"
 }
