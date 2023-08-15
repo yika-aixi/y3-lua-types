@@ -5,18 +5,18 @@
         /**
          * 隐藏
          * */
-        HIDE = 0,
+        HIDE = "HIDE",
         /**
          * 普通
          * */
-        NORMAL = 1,
+        NORMAL = "NORMAL",
         /**
          * 命令
          * */
-        COMMON = 2,
+        COMMON = "COMMON",
         /**
          * 英雄
          * */
-        HERO = 3,
+        HERO = "HERO",
     }   
 }
