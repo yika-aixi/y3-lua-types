@@ -2,7 +2,9 @@
 
 目前因为工具那边注释生成还未解决完成,暂时不支持注解生成=-=,后续如果解决了,在更新
 
-已知问题:
+### TS的[开发模板](https://github.com/CabinIcarus/y3TsTemplate),模板中附带的[测试代码](https://github.com/CabinIcarus/y3TsTemplate/blob/Master/Scripts/Ts/Example/Test1.ts)
+
+# 已知问题:
 1. 因为工具在转换时一些信息丢失了,我无法知道方法是静态还是成员的,导致一些静态方法调用时转换为lua会出问题
 - 如: y3.unit.create_unit
 
