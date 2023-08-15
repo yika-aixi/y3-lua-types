@@ -1,0 +1,41 @@
+// @ts-nocheck
+declare interface Buff {
+    __tostring(): void;
+    destructor(): void;
+    get_by_handle(py_buff: any): Buff;
+    has_tag(tag: string): boolean;
+    is_icon_visible(): boolean;
+    remove(): void;
+    is_exist(): boolean;
+    set_name(name: string): void;
+    set_description(description: string): void;
+    set_time(time: number): void;
+    add_time(time: number): void;
+    set_stack(stack: number): void;
+    add_stack(stack: number): void;
+    set_shield(value: number): void;
+    add_shield(value: number): void;
+    get_stack(): number;
+    get_time(): number;
+    get_buff_type(): y3.Const.ModifierType;
+    get_buff_effect_type(): y3.Const.EffectType;
+    get_max_stack(): number;
+    get_shield(): number;
+    get_aura(): Buff;
+    get_cycle_time(): number;
+    get_passed_time(): number;
+    get_buff_aura_effect_key(): py.ModifierKey;
+    get_buff_aura_range(): number;
+    get_source(): Unit;
+    get_owner(): Unit;
+    get_name(): string;
+    get_description(): string;
+    get_level(): number;
+    is_icon_visible_by_key(buff_key: py.ModifierKey): boolean;
+    get_key(): py.ModifierKey;
+    get_description_by_key(buff_key: py.ModifierKey): string;
+    get_icon_by_key(buff_key: py.ModifierKey): number;
+    get_ability(): Ability | undefined;
+    add_aura_range(range: number): void;
+    set_aura_range(range: number): void;
+}

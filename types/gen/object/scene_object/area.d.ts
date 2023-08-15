@@ -1,0 +1,41 @@
+// @ts-nocheck
+declare interface Area {
+    destructor(): void;
+    get_by_handle(py_area: py.Area, type: Area.Shape): Area;
+    get_by_res_id(res_id: py.AreaID, shape: Area.Shape): Area;
+    get_circle_by_res_id(res_id: py.AreaID): Area;
+    get_rectangle_by_res_id(res_id: py.AreaID): Area;
+    get_polygon_by_res_id(res_id: py.AreaID): Area;
+    remove(): void;
+    set_collision(is_collision_effect: boolean, is_land_effect: boolean, is_air_effect: boolean): void;
+    add_tag(tag: string): void;
+    remove_tag(tag: string): void;
+    has_tag(tag: string): boolean;
+    set_visible(player: Player, is_visibility: boolean, is_real_visibility: boolean): void;
+    set_radius(radius: number): void;
+    set_size(horizontal_length: number, vertical_length: number): void;
+    get_radius(): number;
+    get_min_x(): number;
+    get_min_y(): number;
+    get_max_x(): number;
+    get_max_y(): number;
+    get_center_point(): Point;
+    random_point(): Point;
+    get_weather(): number;
+    get_all_unit_in_area(): Unit[];
+    get_unit_group_in_area(player: Player): UnitGroup;
+    get_unit_num_in_area(): number;
+    edit_area_collision(collision_layer: number, is_add: boolean): void;
+    edit_area_fov_block(fov_block_type: number, is_add: boolean): void;
+    is_point_in_area(point: Point): boolean;
+    get_map_area(): Area;
+    get_rectangle_area_last_created(): Area;
+    create_circle_area(point: Point, radius: number): Area;
+    create_rectangle_area(point: Point, horizontal_length: number, vertical_length: number): Area;
+    create_rectangle_area_from_two_points(point_one: Point, point_two: Point): Area;
+    create_polygon_area_by_points(...vararg: Point): Area;
+    get_circle_areas_by_tag(tag: string): Area[];
+    get_rect_areas_by_tag(tag: string): Area[];
+    get_polygon_areas_by_tag(tag: string): Area[];
+    get_polygon_areas_point_list(polygon: Area): object;
+}
