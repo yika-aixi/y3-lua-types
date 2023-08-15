@@ -63,7 +63,7 @@ declare interface UI {
     remove(): void;
     bind_ability_cd(uiAttr: any, skill: any): self;
     bind_buff_time(uiAttr: any, buff: any): self;
-    enable_chat(enable: any): void;
+    enable_chat(enable: any): self;
     show_chat(player: any, enable: any): self;
     clear_chat(): self;
     send_chat(player: any, msg: any): self;

@@ -15,4 +15,6 @@ declare interface Timer {
     get_remaining_time(): number;
     get_remaining_count(): number;
     get_time_out_time(): number;
+    get_info_source(): string;
+    pairs(): fun():Timer?;
 }

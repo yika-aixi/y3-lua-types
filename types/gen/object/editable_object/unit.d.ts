@@ -10,7 +10,8 @@ declare interface Unit {
     remove_abilitiy_by_key(type: y3.Const.AbilityType, ability_key: py.AbilityKey): void;
     add_item(item_id: py.ItemKey): Item;
     remove_item(item_id: py.ItemKey, num: number): void;
-    shift_item(item: Item, type: y3.Const.SlotType, index: number, force: boolean): void;
+    shift_item(item: Item, type: y3.Const.ShiftSlotTypeAlias, index: number, force: boolean): void;
+    exchange_item(item: Item, type: y3.Const.ShiftSlotTypeAlias, index: number): void;
     get_abilities_by_type(type: y3.Const.AbilityType): Ability[];
     get_buffs(): Buff[];
     switch_ability(ability_1: Ability, ability_2: Ability): void;
