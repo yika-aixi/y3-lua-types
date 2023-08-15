@@ -1,5 +1,5 @@
 ﻿//@ts-nocheck
-declare interface GlobalEvent
+declare interface Y3EventDeclarations
 {
     "界面-消息":
     {
