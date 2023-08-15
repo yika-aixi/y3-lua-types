@@ -1,6 +1,6 @@
 {
     "name": "@cabin-icarus/y3-lua-types",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "y3-lua的typescript的类型文件",
     "files": [
         "index.d.ts",
