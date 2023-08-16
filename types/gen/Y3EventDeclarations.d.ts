@@ -88,7 +88,7 @@ declare interface Y3EventDeclarations {
         /*使用次数*/
         use_cnt: integer;
     };
-    玩家成功使用收费道具（触发器内）: {
+    ['玩家成功使用收费道具（触发器内）']: {
         /*玩家*/
         player: Player;
         /*收费道具编号*/
@@ -277,11 +277,11 @@ declare interface Y3EventDeclarations {
         /*undefined*/
         unit: Unit;
     };
-    单位删除（ECA专用）: {
+    ['单位删除（ECA专用）']: {
         /*undefined*/
         unit: Unit;
     };
-    单位删除（对象真正销毁）: {
+    ['单位删除（对象真正销毁）']: {
         /*undefined*/
         unit: Unit;
     };
@@ -367,7 +367,7 @@ declare interface Y3EventDeclarations {
         /*伤害实例*/
         damage_instance: DamageInstance;
     };
-    单位即将受到攻击（计算加成后）: {
+    ['单位即将受到攻击（计算加成后）']: {
         /*受到的伤害值*/
         damage: number;
         /*施加伤害的单位*/
@@ -383,7 +383,7 @@ declare interface Y3EventDeclarations {
         /*伤害实例*/
         damage_instance: DamageInstance;
     };
-    单位即将击中其他单位（计算加成后）: {
+    ['单位即将击中其他单位（计算加成后）']: {
         /*受到的伤害值*/
         damage: number;
         /*施加伤害的单位*/
@@ -862,7 +862,7 @@ declare interface Y3EventDeclarations {
         /*技能目标单位*/
         ability_target_unit: Unit;
     };
-    技能结束（无论何种方式）: {
+    ['技能结束（无论何种方式）']: {
         /*技能对象*/
         ability: Ability;
         /*技能Owner*/
@@ -1354,11 +1354,11 @@ declare interface Y3EventDeclarations {
         /*技能Seq*/
         ability_seq: py.AbilitySeq;
     };
-    设置箭头/多段指示器长度: {
+    ['设置箭头/多段指示器长度']: {
         /*技能Seq*/
         ability_seq: py.AbilitySeq;
     };
-    设置箭头/多段指示器宽度: {
+    ['设置箭头/多段指示器宽度']: {
         /*技能Seq*/
         ability_seq: py.AbilitySeq;
     };
@@ -1372,19 +1372,19 @@ declare interface Y3EventDeclarations {
         /*技能指示器类型*/
         skill_pointer_type: py.SkillPointerType;
     };
-    触碰（鼠标）开始事件: {
+    ['触碰（鼠标）开始事件']: {
         /*触碰(鼠标)id*/
         touch_id: integer;
         /*触碰(鼠标)坐标*/
         pos: py.Vector2;
     };
-    触碰（鼠标）移动事件: {
+    ['触碰（鼠标）移动事件']: {
         /*触碰(鼠标)id*/
         touch_id: integer;
         /*触碰(鼠标)坐标*/
         pos: py.Vector2;
     };
-    触碰（鼠标）结束事件: {
+    ['触碰（鼠标）结束事件']: {
         /*触碰(鼠标)id*/
         touch_id: integer;
         /*触碰(鼠标)坐标*/
