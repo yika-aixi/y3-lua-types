@@ -1,9 +1,14 @@
-// @ts-nocheck
+
 declare interface Game
 {
-    event(name:y3.Const.GlobalEventType, act:ActionArgsNoSelf):Trigger;
-
-    event<TEName extends keyof Y3EventDeclarations>(name: TEName, act:Action1NoSelf<Y3EventDeclarations[TEName]>):Trigger;
-
-    event<TEName extends keyof Y3EventDeclarations>(name: TEName, type:string, act:Action1NoSelf<Y3EventDeclarations[TEName]>):Trigger;
+    event<T extends string | object>(
+            /** 事件名 */
+            name: (T extends string ? T : string) | GameEventName,
+            /** 事件的辅助参数 ，这里应该是 若干个， */
+            ...args: T extends string 
+            ? T extends keyof GameEventParams 
+                ? Parameters<GameEventParams[T]>
+                : [GameEventCallback<any> ]
+            : [GameEventCallback<T>]
+        ): Trigger;
 }
