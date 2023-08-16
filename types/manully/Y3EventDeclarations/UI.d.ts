@@ -12,6 +12,9 @@ declare type GameEventName =
     | y3.Const.DestructibleEventType
     | y3.Const.MovementObstacleProcessType
 
+/** 这个接口是动作函数的参数
+ * 申明于 script\y3\meta\event.lua
+ * */
 declare interface GameEventDeclarations extends Record<GameEventName, object> {
     [y3.Const.GlobalEventType.UI_EVENT]: {
         // 触发事件的玩家
@@ -32,6 +35,9 @@ declare interface GameEventDeclarations extends Record<GameEventName, object> {
     }
 }
 
+/** 这个接口是事件的参数构成，整体结构是 事件名, ...辅助参数, 动作函数
+ * 申明于 script\y3\meta\eventconfig.lua
+ */
 declare interface GameEventParams extends Record<GameEventName, (...args: [...any[], GameEventCallback<GameEventName>]) => void> {
 
     [y3.Const.GlobalEventType.UI_EVENT]: (event_name: string, fun: GameEventCallback<y3.Const.GlobalEventType.UI_EVENT>) => void
