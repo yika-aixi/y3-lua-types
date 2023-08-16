@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "types": [
+            "@types/node",
+            "node"
+        ],
+        "downlevelIteration": true,
+    }
+}
