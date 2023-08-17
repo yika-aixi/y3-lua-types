@@ -9,11 +9,17 @@
 - 如: y3.unit.create_unit
 
 
-# v0.1.1 更新
+# v0.1.4 更新
 
-1. 对`y3.game.event`进行了处理,现在会扫描[event.lua](https://github.com/y3-editor/y3-lualib/blob/main/meta/event.lua) 生成ts的约束文件,获得更耗的智能提示,效果如下
-![RQFR871BBT8K$ES 7VQRY{H](https://github.com/yika-aixi/y3-lua-types/assets/22412994/d49e28b9-676c-456b-9719-213956825008)
-![5YXKOW9WPWB`((F{T0G66RJ](https://github.com/yika-aixi/y3-lua-types/assets/22412994/3735c129-21ce-4257-a50a-4a1a8a32dcbd)
-这个约束也支持手动扩展,TS的接口合并规则, 扩展例子可以看这个文件[UI](https://github.com/yika-aixi/y3-lua-types/blob/Master/types/manully/Y3EventDeclarations/UI.d.ts)
+1. 对`y3.game.event`进行了处理,现在会扫描[event.lua](https://github.com/y3-editor/y3-lualib/blob/main/meta/event.lua)和[eventconfig.lua](https://github.com/y3-editor/y3-lualib/blob/main/meta/eventconfig.lua) 生成ts的声明文件,获得更好的智能提示,效果如下, 感谢`@西索酱`的PR给我的提示
 
-2. 热重载的`include`方法声明
+![Z{_NQD%@QP71}$7 YPW@33](https://github.com/yika-aixi/y3-lua-types/assets/22412994/76737769-7bb5-4349-9d32-ec5f394daa51)
+![FK9Q NT)GB{H}BAVUVSMSGL](https://github.com/yika-aixi/y3-lua-types/assets/22412994/2eeaad8c-949e-44ae-9ddb-69f113c32c67)
+
+手动扩展方式需要写2个必须定义和1个可选定义:
+1. `GameEventDeclarations` 接口,写事件的定义
+- - 结构为: 事件名 : 事件回调参数类型 | `GameEventCallbackParamsDeclarations["name]`
+2. `GameEventParamsDeclarations` 接口, 写事件的参数定义
+- - 结构的固定格式: 事件名 : (...事件参数列表, act:Action1<Trigger, `GameEventDeclarations['事件名']`>)->void;
+3. [可选]`GameEventCallbackParamsDeclarations` 接口, 写事件的回调参数定义,就是事件触发后的action中的参数
+- - 结构为: 名字 : 类型定义
