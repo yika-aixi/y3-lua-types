@@ -89,6 +89,7 @@ declare interface Unit {
     set_health_bar_display(bar_show_type: number): void;
     set_minimap_icon(img_id: py.Texture): void;
     set_enemy_minimap_icon(img_id: py.Texture): void;
+    set_select_effect_visible(bool: boolean): void;
     set_scale(scale: number): void;
     set_turning_speed(speed: number): void;
     replace_model(model_id: py.ModelKey): void;

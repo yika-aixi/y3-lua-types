@@ -69,7 +69,8 @@ declare interface Game {
     current_game_run_time(): number;
     get_day_night_time(): number;
     get_damage_ratio(attack_type: number, area_type: number): number;
-    get_start_mode(): string;
+    get_start_mode(): number;
+    is_debug_mode(): void;
     get_global_archive(name: string): number;
     get_archive_rank_player_archive_value(file: number, index: number): number;
     get_global_weather(): number;

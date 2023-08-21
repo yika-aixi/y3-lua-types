@@ -2,11 +2,12 @@
 declare interface UI {
     destructor(): void;
     __tostring(): void;
-    get_by_handle(player: Player, ui_name: any): UI;
+    get_by_handle(player: Player, handle: any): UI;
     create_ui(player: any, parent_ui: any, comp_type: any): UI;
     get_ui(player: any, ui_path: any): UI;
     create_child(comp_type: any): UI;
     add_event(event: any, name: any): string;
+    set_adaptation(direction: string, offset: number): self;
     send_event(event_name: string): void;
     set_visible(visible: any): self;
     set_image(img: any): self;

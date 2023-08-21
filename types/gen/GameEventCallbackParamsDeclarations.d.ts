@@ -1253,9 +1253,15 @@ declare interface GameEventCallbackParamsDeclarations {
         destructible: Destructible;
     };
     /*投射物产生*/
-    ['ET_PRODUCE_PROJECTILE'];
+    ['ET_PRODUCE_PROJECTILE']: {
+        /*投射物*/
+        projectile: Projectile;
+    };
     /*投射物死亡*/
-    ['ET_DEATH_PROJECTILE'];
+    ['ET_DEATH_PROJECTILE']: {
+        /*投射物*/
+        projectile: Projectile;
+    };
     /*投射物运动开始*/
     ['ET_START_MOVE_PROJECTILE'];
     /*投射物运动目标达成*/
@@ -1279,6 +1285,8 @@ declare interface GameEventCallbackParamsDeclarations {
         pos: py.Vector2;
         /*触碰ID*/
         touch_id: integer;
+        /*ui*/
+        ui: UI;
     };
     /*全局触发器发送ui事件*/
     ['ET_GLOBAL_EVENT_TO_UI_WITH_DICT']: {
