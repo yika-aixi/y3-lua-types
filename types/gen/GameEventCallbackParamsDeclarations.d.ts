@@ -1707,7 +1707,7 @@ declare interface GameEventCallbackParamsDeclarations {
     /*物品层数变化*/
     ['ET_ITEM_STACK_CHANGED']: {
         /*单位*/
-        unit: Item;
+        unit: Unit;
         /*物品*/
         item: Item;
         /*物品编号*/
@@ -1718,7 +1718,7 @@ declare interface GameEventCallbackParamsDeclarations {
     /*物品充能变化*/
     ['ET_ITEM_CHARGE_CHANGED']: {
         /*单位*/
-        unit: Item;
+        unit: Unit;
         /*物品*/
         item: Item;
         /*物品编号*/
