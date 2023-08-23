@@ -5,13 +5,18 @@ declare interface Point {
     */
     __tostring(): void;
     /**
+    * @param py_point Point.HandleType
+    * @return self
+    */
+    __init(py_point: Point.HandleType): self;
+    /**
     * @private
     * @param x number
     * @param y number
     * @param z? number
     * @return Point
     */
-    alloc(x: number, y: number, z): Point;
+    __alloc(x: number, y: number, z): Point;
     /**
     * @param res_id integer
     * @return Point

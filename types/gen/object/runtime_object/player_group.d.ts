@@ -5,6 +5,11 @@ declare interface PlayerGroup {
     */
     __tostring(): void;
     /**
+    * @param py_player_group py.RoleGroup
+    * @return self
+    */
+    __init(py_player_group: py.RoleGroup): self;
+    /**
     * @param py_role_group py.RoleGroup
     * @return PlayerGroup
     */

@@ -1,9 +1,15 @@
 //@ts-nocheck
 declare interface Area {
     /**
+    * @param py_area py.Area
+    * @param shape Area.Shape
+    * @return self
+    */
+    __init(py_area: py.Area, shape: Area.Shape): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * 根据py对象创建区域
     * @param py_area py.Area py层对象

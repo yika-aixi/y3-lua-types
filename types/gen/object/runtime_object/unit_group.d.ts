@@ -2,6 +2,11 @@
 declare interface UnitGroup {
     /**
     * @param py_unit_group py.UnitGroup
+    * @return self
+    */
+    __init(py_unit_group: py.UnitGroup): self;
+    /**
+    * @param py_unit_group py.UnitGroup
     * @return UnitGroup
     */
     get_by_handle(py_unit_group: py.UnitGroup): UnitGroup;

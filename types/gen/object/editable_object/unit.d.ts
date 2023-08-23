@@ -5,9 +5,15 @@ declare interface Unit {
     */
     __tostring(): void;
     /**
+    * @param py_unit_id py.UnitID
+    * @param py_unit py.Unit
+    * @return self
+    */
+    __init(py_unit_id: py.UnitID, py_unit: py.Unit): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * 通过py层的单位实例获取lua层的单位实例
     * @param py_unit py.Unit

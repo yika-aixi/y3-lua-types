@@ -1,6 +1,12 @@
 //@ts-nocheck
 declare interface Cast {
     /**
+    * @param ability Ability
+    * @param cast_id integer
+    * @return self
+    */
+    __init(ability: Ability, cast_id: number): self;
+    /**
     
     */
     __tostring(): void;

@@ -1,6 +1,11 @@
 //@ts-nocheck
 declare interface SceneUI {
     /**
+    * @param py_scene_node py.SceneNode
+    * @return self
+    */
+    __init(py_scene_node: py.SceneNode): self;
+    /**
     * 通过py层的界面实例获取lua层的界面实例
     * @param py_scene_node py.SceneNode
     * @return SceneUI

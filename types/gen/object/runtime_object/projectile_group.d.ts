@@ -2,6 +2,11 @@
 declare interface ProjectileGroup {
     /**
     * @param py_projectile_group py.ProjectileGroup
+    * @return self
+    */
+    __init(py_projectile_group: py.ProjectileGroup): self;
+    /**
+    * @param py_projectile_group py.ProjectileGroup
     * @return ProjectileGroup
     */
     create_lua_projectile_group_from_py(py_projectile_group: py.ProjectileGroup): ProjectileGroup;

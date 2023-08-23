@@ -1,9 +1,15 @@
 //@ts-nocheck
 declare interface Timer {
     /**
+    * @param py_timer py.Timer
+    * @param on_timer Timer.OnTimer
+    * @return self
+    */
+    __init(py_timer: py.Timer, on_timer: Timer.OnTimer): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * @param py_timer py.Timer
     * @param on_timer Timer.OnTimer

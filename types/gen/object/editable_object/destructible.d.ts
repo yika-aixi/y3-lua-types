@@ -1,9 +1,14 @@
 //@ts-nocheck
 declare interface Destructible {
     /**
+    * @param py_destructible py.Destructible
+    * @return self
+    */
+    __init(py_destructible: py.Destructible): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * 通过py层的可破坏物实例获取lua层的可破坏物对象
     * @param  py_destructible py.Destructible

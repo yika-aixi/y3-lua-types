@@ -2,6 +2,11 @@
 declare interface Shape {
     /**
     * @param py_shape py.Shape
+    * @return self
+    */
+    __init(py_shape: py.Shape): self;
+    /**
+    * @param py_shape py.Shape
     * @return Shape
     */
     get_by_handle(py_shape: py.Shape): Shape;

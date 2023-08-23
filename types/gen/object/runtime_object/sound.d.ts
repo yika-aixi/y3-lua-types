@@ -2,6 +2,10 @@
 declare interface Sound {
     /**
     * @param py_sound py.SoundEntity
+    */
+    __init(py_sound: py.SoundEntity): void;
+    /**
+    * @param py_sound py.SoundEntity
     * @return Sound
     */
     get_by_handle(py_sound: py.SoundEntity): Sound;

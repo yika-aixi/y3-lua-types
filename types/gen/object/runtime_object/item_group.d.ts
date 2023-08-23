@@ -2,6 +2,11 @@
 declare interface ItemGroup {
     /**
     * @param py_item_group py.ItemGroup
+    * @return self
+    */
+    __init(py_item_group: py.ItemGroup): self;
+    /**
+    * @param py_item_group py.ItemGroup
     * @return ItemGroup
     */
     create_lua_item_group_from_py(py_item_group: py.ItemGroup): ItemGroup;

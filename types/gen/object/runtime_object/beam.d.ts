@@ -1,9 +1,14 @@
 //@ts-nocheck
 declare interface Beam {
     /**
+    * @param py_beam py.LinkSfx
+    * @return self
+    */
+    __init(py_beam: py.LinkSfx): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * @param py_beam py.LinkSfx
     * @return Beam beam

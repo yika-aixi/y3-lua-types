@@ -1,9 +1,14 @@
 //@ts-nocheck
 declare interface Ability {
     /**
+    * @param py_ability py.Ability
+    * @return self
+    */
+    __init(py_ability: py.Ability): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * 通过py层的技能实例获取lua层的技能实例
     * @param py_ability py.Ability # py层的技能实例

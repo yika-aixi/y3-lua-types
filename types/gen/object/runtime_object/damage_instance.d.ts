@@ -1,6 +1,11 @@
 //@ts-nocheck
 declare interface DamageInstance {
     /**
+    * @param data EventParam.单位受到伤害后
+    * @param mode '伤害前' | '伤害时' | '伤害后'
+    */
+    __init(data: EventParam.\u5355\u4F4D-\u53D7\u5230\u4F24\u5BB3\u540E, mode: '\u4F24\u5BB3\u524D'): void;
+    /**
     *  获取关联技能
     * @return Ability?
     */

@@ -1,6 +1,11 @@
 //@ts-nocheck
 declare interface Player {
     /**
+    * @param py_player py.Role
+    * @return self
+    */
+    __init(py_player: py.Role): self;
+    /**
     
     */
     __tostring(): void;
@@ -9,7 +14,7 @@ declare interface Player {
     * @param id integer 玩家ID
     * @return Player player 玩家
     */
-    alloc(id: number): Player;
+    __alloc(id: number): Player;
     /**
     * 转换玩家ID为玩家
     * @param id integer 玩家ID

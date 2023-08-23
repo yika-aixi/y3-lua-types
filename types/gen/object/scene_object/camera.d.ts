@@ -2,6 +2,11 @@
 declare interface Camera {
     /**
     * @param py_camera integer
+    * @return self
+    */
+    __init(py_camera: number): self;
+    /**
+    * @param py_camera integer
     * @return Camera camera
     */
     get_by_handle(py_camera: number): Camera;

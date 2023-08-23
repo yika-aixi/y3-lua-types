@@ -1,6 +1,11 @@
 //@ts-nocheck
 declare interface Road {
     /**
+    * @param py_road py.Road
+    * @return self
+    */
+    __init(py_road: py.Road): self;
+    /**
     * @param res_id integer
     * @return Road
     */

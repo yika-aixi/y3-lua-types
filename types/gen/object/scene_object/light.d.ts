@@ -1,6 +1,11 @@
 //@ts-nocheck
 declare interface Light {
     /**
+    * @param py_light py.Light
+    * @return self
+    */
+    __init(py_light: py.Light): self;
+    /**
     * 根据场景id获得点光源
     * @param res_id py.LightID 编辑场景中的id
     * @return Light

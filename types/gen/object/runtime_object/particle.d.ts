@@ -5,9 +5,14 @@ declare interface Particle {
     */
     __tostring(): void;
     /**
+    * @param sfx py.Sfx
+    * @return self
+    */
+    __init(sfx: py.Sfx): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * @param py_sfx py.Sfx
     * @return Particle

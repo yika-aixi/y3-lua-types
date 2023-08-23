@@ -5,9 +5,15 @@ declare interface Buff {
     */
     __tostring(): void;
     /**
+    * @param id integer
+    * @param py_modifier py.ModifierEntity
+    * @return Buff
+    */
+    __init(id: number, py_modifier: py.ModifierEntity): Buff;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * 通过py层的魔法效果实例获取lua层的魔法效果实例
     * @param  py_buff py.ModifierEntity # py层的魔法效果实例

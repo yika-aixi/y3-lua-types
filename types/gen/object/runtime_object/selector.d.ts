@@ -1,6 +1,10 @@
 //@ts-nocheck
 declare interface Selector {
     /**
+    * @return self
+    */
+    __init(): self;
+    /**
     *  形状  添加形状对象
     * @param pos Point
     * @param shape Shape

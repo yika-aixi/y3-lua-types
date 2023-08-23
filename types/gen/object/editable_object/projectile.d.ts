@@ -1,9 +1,15 @@
 //@ts-nocheck
 declare interface Projectile {
     /**
+    * @param id integer
+    * @param py_projectile py.ProjectileEntity
+    * @return self
+    */
+    __init(id: number, py_projectile: py.ProjectileEntity): self;
+    /**
     
     */
-    destructor(): void;
+    __del(): void;
     /**
     * @param py_projectile py.ProjectileEntity
     * @return Projectile projectile

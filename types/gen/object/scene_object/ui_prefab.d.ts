@@ -1,6 +1,12 @@
 //@ts-nocheck
 declare interface UIPrefab {
     /**
+    * @param player Player
+    * @param ui_name string
+    * @return self
+    */
+    __init(player: Player, ui_name: string): self;
+    /**
     * 通过py层的界面实例获取lua层的界面实例
     * @param  player Player 玩家
     * @param  prefab_name string
