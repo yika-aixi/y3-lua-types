@@ -4,7 +4,7 @@ declare interface Camera {
     * @param py_camera integer
     * @return self
     */
-    __init(py_camera: number): self;
+    __init(py_camera: number): this;
     /**
     * @param py_camera integer
     * @return Camera camera

@@ -4,7 +4,7 @@ declare interface ProjectileGroup {
     * @param py_projectile_group py.ProjectileGroup
     * @return self
     */
-    __init(py_projectile_group: py.ProjectileGroup): self;
+    __init(py_projectile_group: py.ProjectileGroup): this;
     /**
     * @param py_projectile_group py.ProjectileGroup
     * @return ProjectileGroup

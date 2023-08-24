@@ -4,7 +4,7 @@ declare interface ItemGroup {
     * @param py_item_group py.ItemGroup
     * @return self
     */
-    __init(py_item_group: py.ItemGroup): self;
+    __init(py_item_group: py.ItemGroup): this;
     /**
     * @param py_item_group py.ItemGroup
     * @return ItemGroup

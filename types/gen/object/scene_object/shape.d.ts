@@ -4,7 +4,7 @@ declare interface Shape {
     * @param py_shape py.Shape
     * @return self
     */
-    __init(py_shape: py.Shape): self;
+    __init(py_shape: py.Shape): this;
     /**
     * @param py_shape py.Shape
     * @return Shape

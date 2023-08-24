@@ -4,7 +4,7 @@ declare interface UnitGroup {
     * @param py_unit_group py.UnitGroup
     * @return self
     */
-    __init(py_unit_group: py.UnitGroup): self;
+    __init(py_unit_group: py.UnitGroup): this;
     /**
     * @param py_unit_group py.UnitGroup
     * @return UnitGroup

@@ -5,7 +5,7 @@ declare interface Timer {
     * @param on_timer Timer.OnTimer
     * @return self
     */
-    __init(py_timer: py.Timer, on_timer: Timer.OnTimer): self;
+    __init(py_timer: py.Timer, on_timer: Timer.OnTimer): this;
     /**
     
     */

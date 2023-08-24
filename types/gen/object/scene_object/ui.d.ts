@@ -5,7 +5,7 @@ declare interface UI {
     * @param handle string
     * @return self
     */
-    __init(player: Player, handle: string): self;
+    __init(player: Player, handle: string): this;
     /**
     
     */
@@ -64,98 +64,98 @@ declare interface UI {
     * @param visible boolean 显示/隐藏
     * @return self
     */
-    set_visible(visible: boolean): self;
+    set_visible(visible: boolean): this;
     /**
     * 设置图片
     * @param img py.Texture 图片id
     * @return self
     */
-    set_image(img: py.Texture): self;
+    set_image(img: py.Texture): this;
     /**
     * 设置文本
     * @param str string 文本
     * @return self
     */
-    set_text(str: string): self;
+    set_text(str: string): this;
     /**
     * 设置控件透明度
     * @param value number 透明度
     * @return self
     */
-    set_alpha(value: number): self;
+    set_alpha(value: number): this;
     /**
     * 设置控件是否可拖动
     * @param isdrag boolean 是否可拖动
     * @return self
     */
-    set_is_draggable(isdrag: boolean): self;
+    set_is_draggable(isdrag: boolean): this;
     /**
     * 设置控件是否拦截操作
     * @param intercepts boolean 是否拦截操作
     * @return self
     */
-    set_intercepts_operations(intercepts: boolean): self;
+    set_intercepts_operations(intercepts: boolean): this;
     /**
     * 设置控件深度
     * @param deep integer 深度
     * @return self
     */
-    set_z_order(deep: number): self;
+    set_z_order(deep: number): this;
     /**
     * 设置进度条最大值
     * @param progress number 进度条最大值
     * @return self
     */
-    set_max_progress_bar_value(progress: number): self;
+    set_max_progress_bar_value(progress: number): this;
     /**
     * 设置进度条当前值
     * @param progress number 进度条当前值
     * @param time number? 渐变时间
     * @return self
     */
-    set_current_progress_bar_value(progress: number, time: number?): self;
+    set_current_progress_bar_value(progress: number, time: number?): this;
     /**
     * 启用/禁用按钮
     * @param enable boolean 启用/禁用按钮
     * @return self
     */
-    set_button_enable(enable: boolean): self;
+    set_button_enable(enable: boolean): this;
     /**
     * 设置控件尺寸
     * @param width number 宽度
     * @param height number 高度
     * @return self
     */
-    set_ui_size(width: number, height: number): self;
+    set_ui_size(width: number, height: number): this;
     /**
     * 设置文本字体大小
     * @param size integer 字体大小
     * @return self
     */
-    set_font_size(size: number): self;
+    set_font_size(size: number): this;
     /**
     * 让输入框获取焦点
     * @return self
     */
-    set_input_field_focus(): self;
+    set_input_field_focus(): this;
     /**
     * 绑定技能对象到控件
     * @param skill Ability 技能对象
     * @return self
     */
-    set_skill_on_ui_comp(skill: Ability): self;
+    set_skill_on_ui_comp(skill: Ability): this;
     /**
     * 绑定单位到魔法效果显示栏组件
     * @param unit Unit 单位
     * @return self
     */
-    set_buff_on_ui(unit: Unit): self;
+    set_buff_on_ui(unit: Unit): this;
     /**
     *  绑定物品对象到物品组件
     * @param item Item 物品对象
     * @return self
     */
-    set_item_on_ui(item: Item): self;
+    set_item_on_ui(item: Item): this;
     /**
     * 设置默认游戏界面的开关
     * @param player Player 玩家
@@ -167,7 +167,7 @@ declare interface UI {
     * @param modelid py.Model 模型id
     * @return self
     */
-    set_ui_model_id(modelid: py.Model): self;
+    set_ui_model_id(modelid: py.Model): this;
     /**
     * 改变小地图图片
     * @param player Player 玩家
@@ -181,37 +181,37 @@ declare interface UI {
     * @param index integer 格子位置
     * @return self
     */
-    set_ui_unit_slot(unit: Unit, field: y3.Const.SlotType, index: number): self;
+    set_ui_unit_slot(unit: Unit, field: y3.Const.SlotType, index: number): this;
     /**
     * 设置按钮快捷键
     * @param key integer 快捷键
     * @return self
     */
-    set_button_shortcut(key: number): self;
+    set_button_shortcut(key: number): this;
     /**
     * 设置按钮组合快捷键
     * @param key integer 辅助按键
     * @return self
     */
-    set_btn_meta_key(key: number): self;
+    set_btn_meta_key(key: number): this;
     /**
     * 设置智能施法快捷键
     * @param key integer 快捷键
     * @return self
     */
-    set_skill_btn_smart_cast_key(key: number): self;
+    set_skill_btn_smart_cast_key(key: number): this;
     /**
     * 设置智能施法组合快捷键
     * @param key integer 辅助按键
     * @return self
     */
-    set_skill_btn_func_meta_key(key: number): self;
+    set_skill_btn_func_meta_key(key: number): this;
     /**
     * 播放/停止技能按钮激活动效
     * @param isopen boolean 播放/停止技能按钮激活动效
     * @return self
     */
-    set_skill_btn_action_effect(isopen: boolean): self;
+    set_skill_btn_action_effect(isopen: boolean): this;
     /**
     * 设置文本颜色
     * @param r number 红色
@@ -220,13 +220,13 @@ declare interface UI {
     * @param a number 红色
     * @return self
     */
-    set_text_color(r: number, g: number, b: number, a: number): self;
+    set_text_color(r: number, g: number, b: number, a: number): this;
     /**
     * 设置模型控件的镜头视野
     * @param fov number 视野范围
     * @return self
     */
-    change_showroom_fov(fov: number): self;
+    change_showroom_fov(fov: number): this;
     /**
     * 设置模型控件的镜头坐标
     * @param x number x轴
@@ -234,7 +234,7 @@ declare interface UI {
     * @param z number z轴
     * @return self
     */
-    change_showroom_cposition(x: number, y: number, z: number): self;
+    change_showroom_cposition(x: number, y: number, z: number): this;
     /**
     * 设置模型控件的镜头旋转
     * @param x number x轴
@@ -242,7 +242,7 @@ declare interface UI {
     * @param z number z轴
     * @return self
     */
-    change_showroom_crotation(x: number, y: number, z: number): self;
+    change_showroom_crotation(x: number, y: number, z: number): this;
     /**
     * 系统消息提示
     * @param player Player 玩家
@@ -259,40 +259,40 @@ declare interface UI {
     * @param a number 透明度
     * @return self
     */
-    set_show_room_background_color(r: number, g: number, b: number, a: number): self;
+    set_show_room_background_color(r: number, g: number, b: number, a: number): this;
     /**
     * 设置控件相对旋转
     * @param rot number 角度
     * @return self
     */
-    set_widget_relative_rotation(rot: number): self;
+    set_widget_relative_rotation(rot: number): this;
     /**
     * 设置控件绝对坐标
     * @param x number x轴
     * @param y number y轴
     * @return self
     */
-    set_widget_absolute_coordinates(x: number, y: number): self;
+    set_widget_absolute_coordinates(x: number, y: number): this;
     /**
     * 设置控件绝对旋转
     * @param rot number 角度
     * @return self
     */
-    set_widget_absolute_rotation(rot: number): self;
+    set_widget_absolute_rotation(rot: number): this;
     /**
     * 设置控件绝对缩放
     * @param x number x轴
     * @param y number y轴
     * @return self
     */
-    set_widget_absolute_scale(x: number, y: number): self;
+    set_widget_absolute_scale(x: number, y: number): this;
     /**
     * 设置控件相对缩放
     * @param x number x轴
     * @param y number y轴
     * @return self
     */
-    set_widget_relative_scale(x: number, y: number): self;
+    set_widget_relative_scale(x: number, y: number): this;
     /**
     * 设置小地图显示模式
     * @param player Player 玩家
@@ -304,12 +304,12 @@ declare interface UI {
     * @param percent number 滑动条的进度
     * @return self
     */
-    set_slider_value(percent: number): self;
+    set_slider_value(percent: number): this;
     /**
     * 解绑控件
     * @return self
     */
-    unbind_widget(): self;
+    unbind_widget(): this;
     /**
     * 遍历某个界面控件的子节点
     * @return UI[]
@@ -330,7 +330,7 @@ declare interface UI {
     * @param z number z轴
     * @return self
     */
-    set_ui_model_focus_pos(x: number, y: number, z: number): self;
+    set_ui_model_focus_pos(x: number, y: number, z: number): this;
     /**
     * 绑定单位属性到玩家界面控件的属性
     * @param uiAttr string 界面控件属性
@@ -338,7 +338,7 @@ declare interface UI {
     * @param accuracy integer 小数精度
     * @return self
     */
-    bind_player_attribute(uiAttr: string, attr: string, accuracy: number): self;
+    bind_player_attribute(uiAttr: string, attr: string, accuracy: number): this;
     /**
     * 绑定全局变量到玩家界面控件的属性
     * @param uiAttr string 界面控件属性
@@ -346,44 +346,44 @@ declare interface UI {
     * @param accuracy integer 小数精度
     * @return self
     */
-    bind_global_variable(uiAttr: string, globalVar: string, accuracy: number): self;
+    bind_global_variable(uiAttr: string, globalVar: string, accuracy: number): this;
     /**
     * 解绑界面控件属性绑定
     * @param uiAttr string 界面控件属性
     * @return self
     */
-    unbind(uiAttr: string): self;
+    unbind(uiAttr: string): this;
     /**
     * 界面控件属性绑定指定单位
     * @param unit Unit 单位
     * @return self
     */
-    bind_unit(unit: Unit): self;
+    bind_unit(unit: Unit): this;
     /**
     * 设置禁用图片(图片类型)
     * @param img integer 图片id
     * @return self
     */
-    set_disable_image_type(img: number): self;
+    set_disable_image_type(img: number): this;
     /**
     * 设置悬浮图片(图片类型)
     * @param img integer 图片id
     * @return self
     */
-    set_hover_image_type(img: number): self;
+    set_hover_image_type(img: number): this;
     /**
     * 设置按下图片(图片类型)
     * @param img integer 图片id
     * @return self
     */
-    set_press_image_type(img: number): self;
+    set_press_image_type(img: number): this;
     /**
     * 设置文本的对齐方式
     * @param h? y3.Const.UIHAlignmentType # 横向对齐方式
     * @param v? y3.Const.UIVAlignmentType # 纵向对齐方式
     * @return self
     */
-    set_text_alignment(h, v): self;
+    set_text_alignment(h, v): this;
     /**
     * 开启绘制单位路径线
     * @param player Player 玩家
@@ -406,47 +406,47 @@ declare interface UI {
     * @param skill Ability 技能
     * @return self
     */
-    bind_ability_cd(uiAttr: string, skill: Ability): self;
+    bind_ability_cd(uiAttr: string, skill: Ability): this;
     /**
     * 绑定魔法效果剩余时间到玩家界面控件的属性
     * @param uiAttr string 界面控件属性
     * @param buff Buff 魔法效果
     * @return self
     */
-    bind_buff_time(uiAttr: string, buff: Buff): self;
+    bind_buff_time(uiAttr: string, buff: Buff): this;
     /**
     * 开启/禁用发送聊天功能
     * @param enable boolean 开启/禁用发送聊天功能
     * @return self
     */
-    enable_chat(enable: boolean): self;
+    enable_chat(enable: boolean): this;
     /**
     * 显示/隐藏聊天框
     * @param enable boolean 显示/隐藏聊天框
     * @param player Player 目标玩家
     * @return self
     */
-    show_chat(player: Player, enable: boolean): self;
+    show_chat(player: Player, enable: boolean): this;
     /**
     * 清空聊天信息
     * @return self
     */
-    clear_chat(): self;
+    clear_chat(): this;
     /**
     * 发送私聊信息
     * @param player Player 玩家
     * @param msg string 信息
     * @return self
     */
-    send_chat(player: Player, msg: string): self;
+    send_chat(player: Player, msg: string): this;
     /**
     * 创建悬浮文字
     * @param point Point 点
-    * @param harm_type integer 跳字类型
+    * @param text_type y3.Const.HarmTextType 跳字类型
     * @param str string 文字
     * @param player_group PlayerGroup 玩家组
     */
-    create_floating_text(point: Point, harm_type: number, str: string, player_group: PlayerGroup): void;
+    create_floating_text(point: Point, text_type: y3.Const.HarmTextType, str: string, player_group: PlayerGroup): void;
     /**
     * 设置窗口
     * @param player Player 玩家
@@ -568,14 +568,14 @@ declare interface UI {
     * @param y number y轴
     * @return self
     */
-    set_pos(x: number, y: number): self;
+    set_pos(x: number, y: number): this;
     /**
     * 设置界面控件的锚点
     * @param x number x轴
     * @param y number y轴
     * @return self
     */
-    set_anchor(x: number, y: number): self;
+    set_anchor(x: number, y: number): this;
     /**
     * 设置聊天频道
     * @param switch boolean 开关
@@ -607,7 +607,7 @@ declare interface UI {
     * @param follow_mouse boolean
     * @return self
     */
-    set_follow_mouse(follow_mouse: boolean): self;
+    set_follow_mouse(follow_mouse: boolean): this;
     /**
     *  设置鼠标样式
     * @param player Player
@@ -615,5 +615,5 @@ declare interface UI {
     * @param key py.CursorKey
     * @return self
     */
-    set_cursor(player: Player, state: y3.Const.CursorState, key: py.CursorKey): self;
+    set_cursor(player: Player, state: y3.Const.CursorState, key: py.CursorKey): this;
 }

@@ -4,7 +4,7 @@ declare interface Beam {
     * @param py_beam py.LinkSfx
     * @return self
     */
-    __init(py_beam: py.LinkSfx): self;
+    __init(py_beam: py.LinkSfx): this;
     /**
     
     */

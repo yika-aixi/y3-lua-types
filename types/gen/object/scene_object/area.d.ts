@@ -5,7 +5,7 @@ declare interface Area {
     * @param shape Area.Shape
     * @return self
     */
-    __init(py_area: py.Area, shape: Area.Shape): self;
+    __init(py_area: py.Area, shape: Area.Shape): this;
     /**
     
     */

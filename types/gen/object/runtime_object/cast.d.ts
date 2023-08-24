@@ -5,7 +5,7 @@ declare interface Cast {
     * @param cast_id integer
     * @return self
     */
-    __init(ability: Ability, cast_id: number): self;
+    __init(ability: Ability, cast_id: number): this;
     /**
     
     */

@@ -4,7 +4,7 @@ declare interface Ability {
     * @param py_ability py.Ability
     * @return self
     */
-    __init(py_ability: py.Ability): self;
+    __init(py_ability: py.Ability): this;
     /**
     
     */

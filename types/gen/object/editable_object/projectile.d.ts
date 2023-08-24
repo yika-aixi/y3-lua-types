@@ -5,7 +5,7 @@ declare interface Projectile {
     * @param py_projectile py.ProjectileEntity
     * @return self
     */
-    __init(id: number, py_projectile: py.ProjectileEntity): self;
+    __init(id: number, py_projectile: py.ProjectileEntity): this;
     /**
     
     */

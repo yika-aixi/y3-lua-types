@@ -4,7 +4,7 @@ declare interface Destructible {
     * @param py_destructible py.Destructible
     * @return self
     */
-    __init(py_destructible: py.Destructible): self;
+    __init(py_destructible: py.Destructible): this;
     /**
     
     */

@@ -8,7 +8,7 @@ declare interface Particle {
     * @param sfx py.Sfx
     * @return self
     */
-    __init(sfx: py.Sfx): self;
+    __init(sfx: py.Sfx): this;
     /**
     
     */

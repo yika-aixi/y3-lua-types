@@ -8,7 +8,7 @@ declare interface PlayerGroup {
     * @param py_player_group py.RoleGroup
     * @return self
     */
-    __init(py_player_group: py.RoleGroup): self;
+    __init(py_player_group: py.RoleGroup): this;
     /**
     * @param py_role_group py.RoleGroup
     * @return PlayerGroup

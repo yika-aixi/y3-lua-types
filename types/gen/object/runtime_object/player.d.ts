@@ -4,7 +4,7 @@ declare interface Player {
     * @param py_player py.Role
     * @return self
     */
-    __init(py_player: py.Role): self;
+    __init(py_player: py.Role): this;
     /**
     
     */
@@ -411,4 +411,9 @@ declare interface Player {
     * @param time number 过渡时间
     */
     set_vignetting_color(red: number, green: number, blue: number, time: number): void;
+    /**
+    *  获取本地玩家，注意这可能会导致不同步！
+    * @return Player
+    */
+    get_local(): Player;
 }

@@ -9,7 +9,7 @@ declare interface Unit {
     * @param py_unit py.Unit
     * @return self
     */
-    __init(py_unit_id: py.UnitID, py_unit: py.Unit): self;
+    __init(py_unit_id: py.UnitID, py_unit: py.Unit): this;
     /**
     
     */

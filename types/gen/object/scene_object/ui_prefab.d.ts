@@ -5,7 +5,7 @@ declare interface UIPrefab {
     * @param ui_name string
     * @return self
     */
-    __init(player: Player, ui_name: string): self;
+    __init(player: Player, ui_name: string): this;
     /**
     * 通过py层的界面实例获取lua层的界面实例
     * @param  player Player 玩家

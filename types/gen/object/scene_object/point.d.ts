@@ -8,7 +8,7 @@ declare interface Point {
     * @param py_point Point.HandleType
     * @return self
     */
-    __init(py_point: Point.HandleType): self;
+    __init(py_point: Point.HandleType): this;
     /**
     * @private
     * @param x number
