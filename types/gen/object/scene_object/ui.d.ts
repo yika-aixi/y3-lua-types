@@ -128,6 +128,15 @@ declare interface UI {
     */
     set_ui_size(width: number, height: number): this;
     /**
+    * 设置控件9宫格
+    * @param x_left integer # x
+    * @param x_right integer # y
+    * @param y_top integer # width
+    * @param y_bottom integer # height
+    * @return self
+    */
+    set_ui_9(x_left: number, x_right: number, y_top: number, y_bottom: number): this;
+    /**
     * 设置文本字体大小
     * @param size integer 字体大小
     * @return self
@@ -340,6 +349,15 @@ declare interface UI {
     */
     bind_player_attribute(uiAttr: string, attr: string, accuracy: number): this;
     /**
+    * 绑定玩家属性到玩家界面控件的属性
+    * @param uiAttr string 界面控件属性
+    * @param player Player # 玩家
+    * @param attr_or_var string # 玩家属性key
+    * @param accuracy integer 小数精度
+    * @return self
+    */
+    bind_player_prop(uiAttr: string, player: Player, attr_or_var: string, accuracy: number): this;
+    /**
     * 绑定全局变量到玩家界面控件的属性
     * @param uiAttr string 界面控件属性
     * @param globalVar string 全局属性
@@ -400,6 +418,10 @@ declare interface UI {
     * 删除界面控件
     */
     remove(): void;
+    /**
+    *  是否被删除
+    */
+    is_removed(): void;
     /**
     * 绑定技能冷却时间到玩家界面控件的属性
     * @param uiAttr string 界面控件属性
@@ -563,7 +585,7 @@ declare interface UI {
     */
     is_visible(): boolean;
     /**
-    * 设置ui坐标
+    * 设置控件相对坐标
     * @param x number x轴
     * @param y number y轴
     * @return self

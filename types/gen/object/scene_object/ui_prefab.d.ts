@@ -17,14 +17,14 @@ declare interface UIPrefab {
     * 创建界面模块实例
     * @param  player Player 玩家
     * @param  prefab_name string 界面模块id
-    * @param  ui_name string ui实例
+    * @param  parent_ui UI 父控件
     * @return UIPrefab
     */
-    create_ui_prefab_instance(player, prefab_name, ui_name): UIPrefab;
+    create(player, prefab_name, parent_ui): UIPrefab;
     /**
     * 删除界面模块实例
     */
-    remove_ui_prefab(): void;
+    remove(): void;
     /**
     *  获取 UIPrefab 的 UI 实例
     * @param  player Player 玩家

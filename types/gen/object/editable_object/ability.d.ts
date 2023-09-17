@@ -16,6 +16,10 @@ declare interface Ability {
     */
     get_by_handle(py_ability: py.Ability): Ability;
     /**
+    
+    */
+    get_key(): void;
+    /**
     * 是否受冷却缩减影响
     * @return boolean is_influenced 是否受冷却缩减影响
     */
@@ -216,11 +220,6 @@ declare interface Ability {
     */
     get_type(): y3.Const.AbilityType;
     /**
-    * 获取技能类型id(物编id)
-    * @return py.AbilityKey ability_key 技能类型id(物编id)
-    */
-    get_ability_key(): py.AbilityKey;
-    /**
     * 获取技能所在技能位
     * @return y3.Const.AbilityIndex index 技能所在技能位
     */
@@ -274,7 +273,7 @@ declare interface Ability {
     * 是否存在
     * @return boolean is_exist 是否存在
     */
-    is_destory(): boolean;
+    is_exist(): boolean;
     /**
     * @param cast integer 施法ID
     * @return Unit|Destructible|Item|Point|nil target 目标
@@ -285,6 +284,11 @@ declare interface Ability {
     * @param player Player 玩家
     */
     show_indicator(player: Player): void;
+    /**
+    * 开关自动施法
+    * @param enable boolean 开关
+    */
+    set_autocast(enable: boolean): void;
     /**
     * 类的方法
     * 检查技能类型前置条件
@@ -336,11 +340,6 @@ declare interface Ability {
     * @return integer id 图片ID
     */
     get_icon_by_key(ability_key: py.AbilityKey): number;
-    /**
-    * 开关自动施法
-    * @param enable boolean 开关
-    */
-    set_autocast(enable: boolean): void;
     /**
     * 获取技能类型公式属性
     * @param ability_id py.AbilityKey 技能类型id(物编id)

@@ -301,10 +301,10 @@ declare interface Player {
     * 创建单位
     * @param unit_id py.UnitKey 单位类型
     * @param point Point 单位
-    * @param direction number 单位
+    * @param facing number 朝向
     * @return Unit
     */
-    create_unit(unit_id: py.UnitKey, point: Point, direction: number): Unit;
+    create_unit(unit_id: py.UnitKey, point: Point, facing: number): Unit;
     /**
     * 强制踢出
     * @param reason string 踢出原因
@@ -412,8 +412,19 @@ declare interface Player {
     */
     set_vignetting_color(red: number, green: number, blue: number, time: number): void;
     /**
+    *  退出游戏
+    */
+    exit_game(): void;
+    /**
     *  获取本地玩家，注意这可能会导致不同步！
+    * > 警告：如果你不确定这个函数在做什么，请不要使用它！
     * @return Player
     */
     get_local(): Player;
+    /**
+    *  获取所有玩家属性的属性名
+    * @param only_coin boolean # 只获取货币类型的玩家属性
+    * @return py.RoleResKey[]
+    */
+    get_res_keys(only_coin: boolean): py.RoleResKey[];
 }

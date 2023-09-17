@@ -107,12 +107,13 @@ declare interface Unit {
     stop_all_abilities(): void;
     /**
     * 添加技能
-    * @param type y3.Const.AbilityType 技能类型
+    * @param type y3.Const.AbilityType | y3.Const.AbilityTypeAlias 技能类型
     * @param id py.AbilityKey 物编id
     * @param slot? y3.Const.AbilityIndex 技能位
     * @param level? integer 等级
+    * @return Ability?
     */
-    add_ability(type: y3.Const.AbilityType, id: py.AbilityKey, slot, level): void;
+    add_ability(type: y3.Const.AbilityType, id: py.AbilityKey, slot, level): Ability?;
     /**
     * 移除技能
     * @param type y3.Const.AbilityType 技能类型
@@ -1066,12 +1067,12 @@ declare interface Unit {
     */
     is_moving(): boolean;
     /**
-    * 是否在另一个单位附近
-    * @param other Unit 单位
+    * 是否在另一个单位或点附近
+    * @param other Unit|Point 单位/点
     * @param range number 范围
     * @return boolean in_radius 在单位附近
     */
-    is_in_radius(other: Unit, range: number): boolean;
+    is_in_radius(other: Unit | Point, range: number): boolean;
     /**
     * 是否是商店
     * @return boolean is_shop 是商店

@@ -1,10 +1,6 @@
 // @ts-nocheck
 declare interface GameEventDeclarations {
     ['未知-ET_LOGIC_UNIT_DESTROY']: GameEventCallbackParamsDeclarations['ET_LOGIC_UNIT_DESTROY'];
-    ['时间-经过']: GameEventCallbackParamsDeclarations['ET_TIMEOUT'];
-    ['时间-周期']: GameEventCallbackParamsDeclarations['ET_REPEAT_TIMEOUT'];
-    ['时间-经过帧']: GameEventCallbackParamsDeclarations['ET_TIMEOUT_BY_FRAME'];
-    ['时间-周期帧']: GameEventCallbackParamsDeclarations['ET_REPEAT_TIMEOUT_BY_FRAME'];
     ['游戏-初始化']: GameEventCallbackParamsDeclarations['ET_GAME_INIT'];
     ['游戏-开始']: GameEventCallbackParamsDeclarations['ET_LOADING_END'];
     ['游戏-追帧完成']: GameEventCallbackParamsDeclarations['ET_RELAUNCH_FRAME_CATCHING_FINISHED'];
@@ -189,10 +185,9 @@ declare interface GameEventDeclarations {
     ['物品-出售']: GameEventCallbackParamsDeclarations['ET_ITEM_SOLD'];
     ['物品-死亡']: GameEventCallbackParamsDeclarations['ET_ITEM_BROKEN'];
     ['物品-采集创建']: GameEventCallbackParamsDeclarations['ET_ITEM_CREATE_ON_DEST_COLLECTED'];
+    ['鼠标-悬停']: GameEventCallbackParamsDeclarations['ET_MOUSE_HOVER_EVENT'];
     ['玩家-发送消息']: GameEventCallbackParamsDeclarations['ET_CHAT_SEND_GM'];
     ['游戏-消息']: GameEventCallbackParamsDeclarations['ET_EVENT_CUSTOM'];
-    ['界面-创建']: GameEventCallbackParamsDeclarations['ET_UI_PREFAB_CREATE_EVENT'];
-    ['界面-移除']: GameEventCallbackParamsDeclarations['ET_UI_PREFAB_DEL_EVENT'];
     ['玩家-语音发言']: GameEventCallbackParamsDeclarations['ET_MICRO_SPEAK'];
     ['未知-ET_UNIT_3D_ACTIVE']: GameEventCallbackParamsDeclarations['ET_UNIT_3D_ACTIVE'];
 }

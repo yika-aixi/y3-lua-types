@@ -2,14 +2,6 @@
 declare type GameEventNames = keyof GameEventParamsDeclarations;
 declare interface GameEventParamsDeclarations extends Record<GameEventDeclarations, object> {
     ['未知-ET_LOGIC_UNIT_DESTROY']: (act: Action1<Trigger, GameEventDeclarations["\u672A\u77E5-ET_LOGIC_UNIT_DESTROY"]>) => void;
-    ['时间-经过']: (/*经过的时间*/
-    time: number, act: Action1<Trigger, GameEventDeclarations["\u65F6\u95F4-\u7ECF\u8FC7"]>) => void;
-    ['时间-周期']: (/*经过的时间*/
-    time: number, act: Action1<Trigger, GameEventDeclarations["\u65F6\u95F4-\u5468\u671F"]>) => void;
-    ['时间-经过帧']: (/*经过的帧数*/
-    count: integer, act: Action1<Trigger, GameEventDeclarations["\u65F6\u95F4-\u7ECF\u8FC7\u5E27"]>) => void;
-    ['时间-周期帧']: (/*经过的帧数*/
-    count: integer, act: Action1<Trigger, GameEventDeclarations["\u65F6\u95F4-\u5468\u671F\u5E27"]>) => void;
     ['游戏-初始化']: (act: Action1<Trigger, GameEventDeclarations["\u6E38\u620F-\u521D\u59CB\u5316"]>) => void;
     ['游戏-开始']: (act: Action1<Trigger, GameEventDeclarations["\u6E38\u620F-\u5F00\u59CB"]>) => void;
     ['游戏-追帧完成']: (act: Action1<Trigger, GameEventDeclarations["\u6E38\u620F-\u8FFD\u5E27\u5B8C\u6210"]>) => void;
@@ -211,10 +203,9 @@ declare interface GameEventParamsDeclarations extends Record<GameEventDeclaratio
     ['物品-出售']: (act: Action1<Trigger, GameEventDeclarations["\u7269\u54C1-\u51FA\u552E"]>) => void;
     ['物品-死亡']: (act: Action1<Trigger, GameEventDeclarations["\u7269\u54C1-\u6B7B\u4EA1"]>) => void;
     ['物品-采集创建']: (act: Action1<Trigger, GameEventDeclarations["\u7269\u54C1-\u91C7\u96C6\u521B\u5EFA"]>) => void;
+    ['鼠标-悬停']: (act: Action1<Trigger, GameEventDeclarations["\u9F20\u6807-\u60AC\u505C"]>) => void;
     ['玩家-发送消息']: (act: Action1<Trigger, GameEventDeclarations["\u73A9\u5BB6-\u53D1\u9001\u6D88\u606F"]>) => void;
     ['游戏-消息']: (act: Action1<Trigger, GameEventDeclarations["\u6E38\u620F-\u6D88\u606F"]>) => void;
-    ['界面-创建']: (act: Action1<Trigger, GameEventDeclarations["\u754C\u9762-\u521B\u5EFA"]>) => void;
-    ['界面-移除']: (act: Action1<Trigger, GameEventDeclarations["\u754C\u9762-\u79FB\u9664"]>) => void;
     ['玩家-语音发言']: (act: Action1<Trigger, GameEventDeclarations["\u73A9\u5BB6-\u8BED\u97F3\u53D1\u8A00"]>) => void;
     ['未知-ET_UNIT_3D_ACTIVE']: (act: Action1<Trigger, GameEventDeclarations["\u672A\u77E5-ET_UNIT_3D_ACTIVE"]>) => void;
 }

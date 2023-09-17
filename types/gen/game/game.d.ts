@@ -455,257 +455,162 @@ declare interface Game {
     */
     locale(key: string): string;
     /**
-    * @return number time_stamp 时间戳
     * 获取游戏开始时间戳
+    * @return integer time_stamp 时间戳
     */
     get_game_init_time_stamp(): number;
     /**
-    * @return number x_resolution 横向分辨率
     * 获取初始化横向分辨率
+    * @return integer x_resolution 横向分辨率
     */
     get_game_x_resolution(): number;
     /**
-    * @return number y_resolution 纵向分辨率
     * 获取初始化纵向分辨率
+    * @return integer y_resolution 纵向分辨率
     */
     get_game_y_resolution(): number;
     /**
-    * @return number quality 画质
     * 获取初始化游戏画质
+    * @return 'low' | 'medium' | 'high' quality 画质
     */
-    get_graphics_quality(): number;
+    get_graphics_quality(): 'low';
     /**
-    * @return number mode 窗口类别
-    * 获取初始化窗口类别
+    * 获取窗口化类别
+    * @return 'full_screen' | 'window_mode' | 'window_mode_full_screen' mode 窗口化类别
     */
-    get_window_mode(): number;
+    get_window_mode(): 'full_screen';
     /**
-    * @param value number 数字
-    * @return string str 字符串
-    * 数字转字符串
-    */
-    number_to_str(value: number): string;
-    /**
-    * @param list userdata 数组变量
-    * 遍历数组变量
-    */
-    list_loop(list: userdata): void;
-    /**
-    * @param is_only_gold boolean 是否只遍历货币
-    * 遍历玩家属性
-    */
-    iter_role_res(is_only_gold: boolean): void;
-    /**
-    * @param func_name string 方法枚举
-    * @param actor userdata 数组变量
-    * @param key string 变量名
-    * @param index integer 索引
-    * @param var userdata 变量
-    * 设置变量
-    */
-    set_lua_var(func_name: string, actor: userdata, key: string, index: number);
-    /**
-    * @param func_name string 方法枚举
-    * @param key string 变量名
-    * @param index integer 索引
-    * 获取变量
-    */
-    get_lua_var(func_name: string, key: string, index: number): void;
-    /**
-    * @param key string 变量名
-    * @param value userdata 值
-    * @param boolean if_list 是否数组
-    * LUA层初始化参数
-    */
-    init_lua_var(key: string, value: userdata, if_list): void;
-    /**
-    * 退出游戏
-    */
-    exit_game(player): void;
-    /**
-    * @param player Player 玩家
-    * @param signal_enum number 信号枚举值
-    * @param point Point 点
-    * @param visible_enum Point 可见性枚举值
     * 发送信号
+    * @param player Player 玩家
+    * @param signal_enum y3.Const.SignalType 信号枚举值
+    * @param point Point 点
+    * @param visible_enum y3.Const.VisibleType 可见性枚举值
     */
-    send_signal(player: Player, signal_enum: number, point: Point, visible_enum: Point): void;
+    send_signal(player: Player, signal_enum: y3.Const.SignalType, point: Point, visible_enum: y3.Const.VisibleType): void;
     /**
-    * 发送自定义事件
+    *  发送自定义事件给ECA
+    * @param id integer 事件id
+    * @param table table 事件数据
     */
-    send_custom_event(id, table): void;
+    send_custom_event(id: number, table: object): void;
     /**
-    * @param point_or_unit Point|Unit 点或单位
-    * @param range number 范围
-    * @return boolean in_radius 在单位附近
-    * 在附近
-    */
-    is_in_radius(point_or_unit: Point | Unit, range: number): boolean;
-    /**
-    * @param value number 治疗值
-    * 设置当前治疗值
-    */
-    set_cure_value(value: number): void;
-    /**
-    * @param str string 字符串
     * 字符串转界面事件
+    * @param str string 字符串
+    * @return string
     */
-    str_to_ui_event(str: string): void;
+    str_to_ui_event(str: string): string;
     /**
-    * 任意变量转字符串
-    */
-    any_var_to_str(p1, p2): void;
-    /**
+    * 获取表
     * @param name string 表名
     * @return table tb 表
-    * 获得表
     */
     get_table(name: string): object;
     /**
     * 表是否存在字段
+    * @param table table
+    * @param key string
+    * @return boolean
     */
-    is_exist_key(table, key): void;
-    /**
-    
-    */
-    set_globale_view(enable): void;
-    /**
-    
-    */
-    request_server_time(func, context): void;
-    /**
-    * @param obj Unit|Item|Point|Area 各种对象
-    * @param key string 字段
-    * @return Point command 点
-    * 是否存在字段
-    */
-    api_has_kv_any(obj: Unit | Item | Point | Area, key: string): Point;
-    /**
-    * 获取本地玩家
-    */
-    get_client_player(): void;
-    /**
-    * 设置对象基础材质颜色
-    */
-    set_object_color(obj, r, g, b, a): void;
+    table_has_key(table: object, key: string): boolean;
     /**
     * 清空表
     */
     clear_table(table): void;
     /**
-    * 物品类型合成所需的物品类型数量
+    *  启用全图视野（总是可见的）
+    * @param enable boolean
     */
-    get_num_of_item_mat(item_key, comp_item_key): void;
+    set_globale_view(enable: boolean): void;
     /**
-    * 物品类型合成所需的玩家属性数量
+    * 设置对象基础材质颜色
+    * @param obj Unit|Item|Destructible
+    * @param r integer
+    * @param g integer
+    * @param b integer
+    * @param a integer
     */
-    get_num_of_player_attr(item_key, role_res_key): void;
+    set_object_color(obj: Unit | Item | Destructible, r: number, g: number, b: number, a: number): void;
     /**
-    * 获取返回的服务器时间(年)
-    */
-    get_server_year(v): void;
-    /**
-    * 获取返回的服务器时间(月)
-    */
-    get_server_month(v): void;
-    /**
-    * 获取返回的服务器时间(日)
-    */
-    get_server_day(v): void;
-    /**
-    * 获取返回的服务器时间(小时)
-    */
-    get_server_hour(v): void;
-    /**
-    * @param mainString string 母字符串
-    * @param findString string 被替换的字符串
-    * @param replaceString string 替换目标字符串
-    * @param num integer 最大替换次数
-    * @return string str 字符串
-    * 字符串替换
-    */
-    string_gsub(mainString: string, findString: string, replaceString: string, num: number): string;
-    /**
-    * @param fps integer 帧率
     * 设置逻辑帧率
+    * @param fps integer 帧率
     */
     set_logic_fps(fps: number): void;
     /**
-    * @param tab table 表
     * 加密表
+    * @param tab table 表
     */
     encrypt_table(tab: object): void;
     /**
-    * @param enable boolean 是否关闭
     * 关闭localplayer的表现层跳字
+    * @param enable boolean 是否关闭
     */
     set_jump_word(enable: boolean): void;
     /**
+    * 特效播放开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 特效播放开关
     */
     sfx_switch(player: Player);
     /**
-    * @param area Area 区域
     * 注册区域的附近语音频道
+    * @param area Area 区域
     */
     reg_sound_area(area: Area): void;
     /**
-    * @param area Area 区域
     * 注销区域的附近语音频道
+    * @param area Area 区域
     */
     unreg_sound_area(area: Area): void;
     /**
-    * @param switch boolean 是否关闭
     * 设置附近语音的区域模式开关
+    * @param switch boolean 是否关闭
     */
     set_nearby_voice_mode();
     /**
+    * 设置玩家的附近语音聊天收听开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 设置玩家的附近语音聊天收听开关
     */
     set_nearby_sound_switch(player: Player);
     /**
+    * 设置玩家的附近语音聊天发言开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 设置玩家的附近语音聊天发言开关
     */
     set_nearby_micro_switch(player: Player);
     /**
+    * 设置玩家的声音主单位
     * @param player Player 玩家
     * @param unit Unit 是否关闭
-    * 设置玩家的声音主单位
     */
     set_role_micro_unit(player: Player, unit: Unit): void;
     /**
-    * @param player Player 玩家
     * 关闭玩家的附近语音聊天
+    * @param player Player 玩家
     */
     close_role_micro_unit(player: Player): void;
     /**
+    * 设置玩家的同阵营语音聊天收听开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 设置玩家的同阵营语音聊天收听开关
     */
     set_role_camp_sound_switch(player: Player);
     /**
+    * 设置玩家的同阵营语音聊天发言开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 设置玩家的同阵营语音聊天发言开关
     */
     set_role_camp_micro_switch(player: Player);
     /**
+    * 设置玩家的所有人语音聊天收听开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 设置玩家的所有人语音聊天收听开关
     */
     set_role_all_sound_switch(player: Player);
     /**
+    * 设置玩家的所有人语音聊天发言开关
     * @param player Player 玩家
     * @param switch boolean 是否关闭
-    * 设置玩家的所有人语音聊天发言开关
     */
     set_role_all_micro_switch(player: Player);
 }

@@ -84,6 +84,11 @@ declare interface Item {
     */
     set_icon(picture_id: py.Texture): void;
     /**
+    * 获取物品的图标
+    * @return py.Texture
+    */
+    get_icon(): py.Texture;
+    /**
     * 设置所属玩家
     * @param player Player 所属玩家
     */
@@ -334,4 +339,18 @@ declare interface Item {
     * @return py.ModelKey model_key 模型类型
     */
     get_model_by_key(item_key: py.ItemKey): py.ModelKey;
+    /**
+    * 物品类型合成所需的物品类型数量
+    * @param item_key py.ItemKey
+    * @param comp_item_key py.ItemKey
+    * @return integer
+    */
+    get_num_of_item_mat(item_key: py.ItemKey, comp_item_key: py.ItemKey): number;
+    /**
+    * 物品类型合成所需的玩家属性数量
+    * @param item_key py.ItemKey
+    * @param role_res_key py.RoleResKey
+    * @return number
+    */
+    get_num_of_player_attr(item_key: py.ItemKey, role_res_key: py.RoleResKey): number;
 }

@@ -517,6 +517,8 @@ declare interface GameEventCallbackParamsDeclarations {
         cured_value: number;
         /*当前治疗所属技能*/
         ability: Ability;
+        /*治疗实例*/
+        heal_instance: HealInstance;
     };
     /*单位受到治疗结束*/
     ['ET_UNIT_GET_CURE_FINISH']: {
@@ -531,6 +533,8 @@ declare interface GameEventCallbackParamsDeclarations {
         cured_value: number;
         /*当前治疗所属技能*/
         ability: Ability;
+        /*治疗实例*/
+        heal_instance: HealInstance;
     };
     /*单位动画状态机进入状态*/
     ['ET_UNIT_ANIM_STATE_ENTER']: {
@@ -540,6 +544,10 @@ declare interface GameEventCallbackParamsDeclarations {
         last_asm_state: py.CcAsmState;
         /*当前动画机状态*/
         cur_asm_state: py.CcAsmState;
+        /*节点名称*/
+        asm_node_name: string;
+        /*节点ID*/
+        asm_node_id: integer;
     };
     /*单位动画状态机退出状态*/
     ['ET_UNIT_ANIM_STATE_EXIT']: {
@@ -547,6 +555,10 @@ declare interface GameEventCallbackParamsDeclarations {
         unit: Unit;
         /*当前动画机状态*/
         cur_asm_state: py.CcAsmState;
+        /*节点名称*/
+        asm_node_name: string;
+        /*节点ID*/
+        asm_node_id: integer;
     };
     /*修改玩家属性图标*/
     ['ET_RES_ICON_CHANGED']: {
@@ -653,6 +665,8 @@ declare interface GameEventCallbackParamsDeclarations {
         /*仆从*/
         unit: Unit;
     };
+    /*单位动画播放完成*/
+    ['UNIT_ANIMATION_FINISHED_EVENT'];
     /*物品附加属性变化*/
     ['ET_ITEM_ATTACHED_ATTR_CHANGED']: {
         /*undefined*/

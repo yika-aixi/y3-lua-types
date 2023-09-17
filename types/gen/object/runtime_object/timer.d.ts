@@ -24,12 +24,26 @@ declare interface Timer {
     */
     wait(timeout: number, on_timer: fun(timer:): Timer;
     /**
+    *  等待一定帧数后执行
+    * @param frame integer
+    * @param on_timer fun(timer: Timer)
+    * @return Timer
+    */
+    wait_frame(frame: number, on_timer: fun(timer:): Timer;
+    /**
     *  循环执行
     * @param timeout number
     * @param on_timer fun(timer: Timer, count: integer)
     * @return Timer
     */
     loop(timeout: number, on_timer: fun(timer:): Timer;
+    /**
+    *  循环一定帧数后执行
+    * @param frame integer
+    * @param on_timer fun(timer: Timer, count: integer)
+    * @return Timer
+    */
+    loop_frame(frame: number, on_timer: fun(timer:): Timer;
     /**
     *  循环指定次数
     * @param timeout number
@@ -38,6 +52,14 @@ declare interface Timer {
     * @return Timer
     */
     count_loop(timeout: number, times: number, on_timer: fun(timer:): Timer;
+    /**
+    *  循环一定帧数指定次数
+    * @param frame integer
+    * @param times integer
+    * @param on_timer fun(timer: Timer, count: integer)
+    * @return Timer
+    */
+    count_loop_frame(frame: number, times: number, on_timer: fun(timer:): Timer;
     /**
     *  立即执行
     */
@@ -84,10 +106,9 @@ declare interface Timer {
     */
     get_time_out_time(): number;
     /**
-    *  获取计时器回调函数的source信息
-    * @return string
+    * @return string?
     */
-    get_info_source(): string;
+    get_include_name(): string?;
     /**
     *  遍历所有的计时器，仅用于调试（可能会遍历到已经失效的）
     * @return fun():Timer?
